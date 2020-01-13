@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="nome_Assembly.Image, nome_Assembly" table="Image">
+        <id name="Id" column="Codigo" type="Int32"> <generator class="assigned" /> </id>
+        <property name="Name" column="nome" type="String"/>
+        <property name="Login" column="login" type="Int32"/>
+        <property name="Id" column="Codigo" type="String"/>
+        <property name="Description" column="Descricao" type="String"/>
+        <property name="Url" column="Url" type="String"/>
+        <property name="Like" column="Like" type="String"/>
+        <property name="UnLike" column="UnLike" type="String"/>
+        
+    </class>
+</hibernate-mapping>

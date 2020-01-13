@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+    <class name="nome_Assembly.User, nome_Assembly" table="User">
+        <id name="Id" column="Codigo" type="Int32"> <generator class="assigned" /> </id>
+        <property name="Name" column="nome" type="String"/>
+        <property name="Login" column="login" type="Int32"/>
+        <bag name="Images" cascade="save-update" inverse="true" lazy="true" generic="true">
+            <key>
+                <column name="codigo_user"></column>
+            </key>
+            <one-to-many class="Image" />
+        </bag>
+    </class>	
+</hibernate-mapping>
